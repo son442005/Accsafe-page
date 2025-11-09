@@ -116,6 +116,33 @@ colors: {
 
 Chỉnh sửa `src/contexts/I18nContext.tsx` và thêm translations mới vào object `translations`.
 
+## Deploy lên GitHub Pages
+
+Xem hướng dẫn chi tiết trong file [DEPLOY.md](./DEPLOY.md)
+
+### Quick Start
+
+1. Tạo repository trên GitHub
+2. Cập nhật `base` trong `vite.config.ts` theo tên repository của bạn
+3. Khởi tạo git và push code:
+   ```bash
+   git init
+   git remote add origin https://github.com/username/accsafe-landing.git
+   git add .
+   git commit -m "Initial commit"
+   git push -u origin main
+   ```
+4. Deploy:
+   ```bash
+   npm run deploy
+   ```
+5. Cấu hình GitHub Pages:
+   - Vào Settings → Pages
+   - Chọn branch `gh-pages` và folder `/ (root)`
+   - Save
+
+Website sẽ có sẵn tại: `https://username.github.io/accsafe-landing/`
+
 ## License
 
 © 2025 Accsafe. All rights reserved.
