@@ -12,21 +12,21 @@ const MultiFeatures = () => {
   const { t } = useI18n();
 
   return (
-    <section className="bg-white py-9">
-      <div className="container">
-        <h2 className="text-center mb-6.5 text-3xl font-bold opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+    <section className="bg-white py-6 md:py-9">
+      <div className="container px-4 md:px-5">
+        <h2 className="text-center mb-4 md:mb-6.5 text-2xl md:text-3xl font-bold opacity-0 animate-fade-in-up px-4" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
           {t('multi.title')}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6.5 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6.5 items-start">
           {multiFeatures.map((feature, index) => (
             <div
               key={feature.key}
-              className="bg-transparent p-2.5 text-center opacity-0 animate-fade-in-up hover:scale-105 transition-all duration-300 rounded-lg hover:bg-gray-50 hover:shadow-md"
+              className="bg-transparent p-3 md:p-2.5 text-center opacity-0 animate-fade-in-up hover:scale-105 transition-all duration-300 rounded-lg hover:bg-gray-50 hover:shadow-md"
               style={{ animationDelay: `${0.2 + index * 0.1}s`, animationFillMode: 'forwards' }}
             >
-              <div className="text-5xl mb-3 hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-              <h4 className="m-2 mb-2 text-base font-semibold">{t(`multi.${feature.key}.title`)}</h4>
-              <p className="text-muted text-sm m-0">{t(`multi.${feature.key}.desc`)}</p>
+              <div className="text-4xl md:text-5xl mb-2 md:mb-3 hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+              <h4 className="m-2 mb-2 text-sm md:text-base font-semibold">{t(`multi.${feature.key}.title`)}</h4>
+              <p className="text-muted text-xs md:text-sm m-0 px-2">{t(`multi.${feature.key}.desc`)}</p>
             </div>
           ))}
         </div>

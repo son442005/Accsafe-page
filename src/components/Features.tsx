@@ -17,39 +17,34 @@ const Features = () => {
   const { t } = useI18n();
 
   return (
-    <section className="bg-[#e9f0f7] py-9">
-      <div className="container">
+    <section className="bg-[#e9f0f7] py-6 md:py-9">
+      <div className="container px-4 md:px-5">
         {features.map((feature, index) => {
           const isReverse = index % 2 === 1;
           return (
             <div
               key={feature.key}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-7 items-center py-6.5 ${
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-7 items-center py-4 md:py-6.5 ${
                 isReverse ? 'lg:flex-row-reverse' : ''
               }`}
-              style={
-                isReverse
-                  ? { gridTemplateColumns: '380px 1fr' }
-                  : { gridTemplateColumns: '1fr 380px' }
-              }
             >
               {!isReverse && (
-                <div className="space-y-2.5 opacity-0 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}>
-                  <h3 className="m-0 mb-2.5 text-2xl font-bold">{t(`feat.${feature.key}.title`)}</h3>
-                  <p className="text-muted leading-relaxed">{t(`feat.${feature.key}.desc`)}</p>
+                <div className="space-y-2 md:space-y-2.5 opacity-0 animate-fade-in-up order-1" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}>
+                  <h3 className="m-0 mb-2 md:mb-2.5 text-xl md:text-2xl font-bold">{t(`feat.${feature.key}.title`)}</h3>
+                  <p className="text-muted leading-relaxed text-sm md:text-base">{t(`feat.${feature.key}.desc`)}</p>
                 </div>
               )}
-              <div className={`opacity-0 animate-fade-in-up ${isReverse ? 'lg:order-1' : ''}`} style={{ animationDelay: `${index * 0.1 + 0.1}s`, animationFillMode: 'forwards' }}>
+              <div className={`opacity-0 animate-fade-in-up ${isReverse ? 'lg:order-1 order-1' : 'order-2'} flex justify-center lg:justify-start`} style={{ animationDelay: `${index * 0.1 + 0.1}s`, animationFillMode: 'forwards' }}>
                 <img
                   src={feature.image}
                   alt={t(`feat.${feature.key}.title`)}
-                  className="w-full max-w-[360px] rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                  className="w-full max-w-full md:max-w-[360px] rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
                 />
               </div>
               {isReverse && (
-                <div className="space-y-2.5 opacity-0 animate-fade-in-up lg:order-2" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}>
-                  <h3 className="m-0 mb-2.5 text-2xl font-bold">{t(`feat.${feature.key}.title`)}</h3>
-                  <p className="text-muted leading-relaxed">{t(`feat.${feature.key}.desc`)}</p>
+                <div className="space-y-2 md:space-y-2.5 opacity-0 animate-fade-in-up lg:order-2 order-2" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}>
+                  <h3 className="m-0 mb-2 md:mb-2.5 text-xl md:text-2xl font-bold">{t(`feat.${feature.key}.title`)}</h3>
+                  <p className="text-muted leading-relaxed text-sm md:text-base">{t(`feat.${feature.key}.desc`)}</p>
                 </div>
               )}
             </div>

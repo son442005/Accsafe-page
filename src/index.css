@@ -152,5 +152,5 @@
 }
 
 .animate-rgb-text {
-  animation: rgb-text 0.01s ease infinite;
+  animation: rgb-text 0.1s ease infinite;
 }

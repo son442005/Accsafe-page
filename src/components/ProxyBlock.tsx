@@ -13,36 +13,36 @@ const ProxyBlock = () => {
   const { t } = useI18n();
 
   return (
-    <section className="bg-navy text-white py-7 mt-0">
-      <div className="container">
-        <div className="flex flex-col lg:flex-row gap-7 items-center">
-          <div className="flex-1 space-y-3 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-            <h3 className="m-0 mb-1.5 text-2xl font-bold">{t('proxy.title')}</h3>
-            <p className="text-[#9fb8c8] m-0">{t('proxy.muted')}</p>
-            <ul className="list-none p-0 m-3 space-y-1.5">
+    <section className="bg-navy text-white py-5 md:py-7 mt-0">
+      <div className="container px-4 md:px-5">
+        <div className="flex flex-col lg:flex-row gap-5 md:gap-7 items-center">
+          <div className="flex-1 space-y-2 md:space-y-3 opacity-0 animate-fade-in-up order-2 lg:order-1 text-center lg:text-left" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+            <h3 className="m-0 mb-1 md:mb-1.5 text-xl md:text-2xl font-bold">{t('proxy.title')}</h3>
+            <p className="text-[#9fb8c8] m-0 text-sm md:text-base">{t('proxy.muted')}</p>
+            <ul className="list-none p-0 m-2 md:m-3 space-y-1 md:space-y-1.5 text-sm md:text-base">
               <li>{t('proxy.countries')}</li>
               <li>{t('proxy.ipv4')}</li>
             </ul>
             <a
               href="#"
-              className="inline-block px-3.5 py-2.5 rounded-lg bg-[#0b66ff] text-white no-underline font-semibold hover:bg-[#0a5ae6] hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg"
+              className="inline-block px-3 md:px-3.5 py-2 md:py-2.5 rounded-lg bg-[#0b66ff] text-white no-underline font-semibold text-sm md:text-base hover:bg-[#0a5ae6] hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg"
             >
               {t('proxy.cta')}
             </a>
           </div>
-          <div className="w-full lg:w-[420px] opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            <div className="bg-white/6 p-4.5 rounded-[10px] space-y-2.5">
+          <div className="w-full lg:w-[420px] opacity-0 animate-fade-in-up order-1 lg:order-2" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <div className="bg-white/6 p-3 md:p-4.5 rounded-[10px] space-y-2 md:space-y-2.5">
               {proxyList.map((proxy, index) => (
                 <div
                   key={index}
-                  className="flex gap-3 items-center p-2.5 hover:bg-white/10 rounded-md transition-colors"
+                  className="flex gap-2 md:gap-3 items-center p-2 md:p-2.5 hover:bg-white/10 rounded-md transition-colors"
                 >
                   <img
                     src={proxy.flag}
                     alt="flag"
-                    className="w-7 h-[18px] object-cover rounded-sm"
+                    className="w-6 md:w-7 h-4 md:h-[18px] object-cover rounded-sm"
                   />
-                  <span className="text-white">{proxy.ip}</span>
+                  <span className="text-white text-sm md:text-base">{proxy.ip}</span>
                 </div>
               ))}
             </div>
