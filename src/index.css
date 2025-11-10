@@ -8,7 +8,7 @@
   body {
     @apply font-sans text-[#06202b] bg-bg;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -25,6 +25,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -32,18 +33,24 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.8;
   }
@@ -67,6 +74,7 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -78,6 +86,7 @@
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -90,4 +99,58 @@
 
 .animate-slide-in-right {
   animation: slide-in-right 0.6s ease-out;
+}
+
+@keyframes rgb-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-rgb-gradient {
+  background: linear-gradient(-45deg, #ff0000, #00ff00, #0000ff, #ff00ff, #00ffff, #ffff00, #ff0000);
+  background-size: 400% 400%;
+  animation: rgb-gradient 0.01s ease infinite;
+}
+
+@keyframes rgb-text {
+  0% {
+    color: #ff0000;
+  }
+
+  16.66% {
+    color: #00ff00;
+  }
+
+  33.33% {
+    color: #0000ff;
+  }
+
+  50% {
+    color: #ff00ff;
+  }
+
+  66.66% {
+    color: #00ffff;
+  }
+
+  83.33% {
+    color: #ffff00;
+  }
+
+  100% {
+    color: #ff0000;
+  }
+}
+
+.animate-rgb-text {
+  animation: rgb-text 0.01s ease infinite;
 }

@@ -16,7 +16,7 @@ const translations: Translations = {
     en: 'Account',
   },
   'top.download': {
-    vi: 'Download',
+    vi: 'Tải xuống',
     en: 'Download',
   },
   'top.lang': {
@@ -39,9 +39,10 @@ const translations: Translations = {
     vi: '• Quản Lý Proxy Tích Hợp',
     en: '• Integrated Proxy Management',
   },
-  'hero.note': {
-    vi: 'Ảnh quản lý tài khoản trong desktop app',
-    en: 'Account management screenshot in desktop app',
+
+  'hero.cta': {
+    vi: 'Bắt đầu trải nghiệm',
+    en: 'Start Experience',
   },
   'feat.p1.title': {
     vi: 'Tạo Hồ Sơ Trình Duyệt Độc Lập',
