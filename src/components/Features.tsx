@@ -50,7 +50,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="bg-[#e9f0f7] py-12 md:py-16 lg:py-20 relative overflow-hidden">
+    <section className="bg-[#e9f0f7] py-[58px] md:py-[74px] lg:py-[90px] relative overflow-hidden">
       {/* Decor elements - Multilogin style */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Grid pattern */}
@@ -67,12 +67,6 @@ const Features = () => {
         <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-br from-blue-400/8 to-cyan-400/8 rounded-full blur-3xl animate-float decor-blob"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-purple-400/8 to-pink-400/8 rounded-full blur-3xl animate-float decor-blob" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-gradient-to-br from-cyan-400/8 to-blue-400/8 rounded-full blur-3xl animate-float decor-blob" style={{ animationDelay: '2s' }}></div>
-
-        {/* Small geometric dots */}
-        <div className="absolute top-32 right-32 w-2 h-2 bg-accent/40 rounded-full animate-pulse-slow shadow-lg shadow-accent/20"></div>
-        <div className="absolute bottom-40 left-40 w-3 h-3 bg-accent/30 rounded-full animate-pulse-slow shadow-lg shadow-accent/20" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-accent/35 rounded-full animate-pulse-slow shadow-lg shadow-accent/20" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute bottom-1/4 right-1/3 w-2.5 h-2.5 bg-accent/25 rounded-full animate-pulse-slow shadow-lg shadow-accent/20" style={{ animationDelay: '2.5s' }}></div>
       </div>
 
       <div className="container relative z-10">
@@ -86,7 +80,7 @@ const Features = () => {
               ref={(el) => {
                 itemRefs.current[index] = el;
               }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 items-start py-12 md:py-16 lg:py-20"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 items-start py-[58px] md:py-[74px] lg:py-[90px]"
             >
               {!isReverse ? (
                 <>

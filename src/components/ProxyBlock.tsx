@@ -13,16 +13,16 @@ const ProxyBlock = () => {
   const { t } = useI18n();
 
   return (
-    <section className="bg-navy text-white py-5 md:py-7 mt-0">
+    <section className="bg-navy text-white pt-5 md:pt-7 pb-[68px] md:pb-[76px] mt-0">
       <div className="container">
-        <div className="flex flex-col lg:flex-row gap-5 md:gap-7 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
           <div className="flex-1 space-y-2 md:space-y-3 opacity-0 animate-fade-in-up order-2 lg:order-1 text-center lg:text-left" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
             <h3 className="m-0 mb-1 md:mb-1.5 text-xl md:text-2xl lg:text-3xl font-bold">{t('proxy.title')}</h3>
             <p className="text-[#9fb8c8] m-0 text-sm md:text-base lg:text-lg">{t('proxy.muted')}</p>
-            <ul className="list-none p-0 m-2 md:m-3 space-y-1 md:space-y-1.5 text-sm md:text-base lg:text-lg">
-              <li>{t('proxy.countries')}</li>
-              <li>{t('proxy.ipv4')}</li>
-            </ul>
+            <div className="p-0 m-2 md:m-3 space-y-1 md:space-y-1.5 text-sm md:text-base lg:text-lg">
+              <div>{t('proxy.countries')}</div>
+              <div>{t('proxy.ipv4')}</div>
+            </div>
             <a
               href="https://fineproxy.org/vi/free-proxy/"
               className="inline-block px-3 md:px-3.5 py-2 md:py-2.5 rounded-lg bg-[#0b66ff] text-white no-underline font-semibold text-sm md:text-base hover:bg-[#0a5ae6] hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg"

@@ -28,16 +28,16 @@ const translations: Translations = {
     en: 'Erase browser fingerprints.<br> Browse anonymously like never before.',
   },
   'hero.b1': {
-    vi: '• Tạo Hồ Sơ Trình Duyệt Độc Lập',
-    en: '• Create Independent Browser Profiles',
+    vi: 'Tạo Hồ Sơ Trình Duyệt Độc Lập',
+    en: 'Create Independent Browser Profiles',
   },
   'hero.b2': {
-    vi: '• Thay Đổi Vân Tay Trình Duyệt',
-    en: '• Change Browser Fingerprinting',
+    vi: 'Thay Đổi Vân Tay Trình Duyệt',
+    en: 'Change Browser Fingerprinting',
   },
   'hero.b3': {
-    vi: '• Quản Lý Proxy Tích Hợp',
-    en: '• Integrated Proxy Management',
+    vi: 'Quản Lý Proxy Tích Hợp',
+    en: 'Integrated Proxy Management',
   },
 
   'hero.cta': {
