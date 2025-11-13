@@ -6,6 +6,7 @@ import MultiFeatures from './components/MultiFeatures';
 import ProxyBlock from './components/ProxyBlock';
 import HowTo from './components/HowTo';
 import Footer from './components/Footer';
+import FloatButton from './components/FloatButton';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <HowTo />
       </main>
       <Footer />
+      <FloatButton />
     </>
   );
 };

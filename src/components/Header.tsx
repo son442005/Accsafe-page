@@ -23,9 +23,6 @@ const Header = () => {
             <img src={logoImage} alt="Accsafe" className="h-8 md:h-[44px] drop-shadow-lg" />
           </a>
           <div className="flex items-center gap-2 md:gap-3.5">
-            <a href="#" className="text-white no-underline hover:text-accent transition-colors font-semibold text-sm md:text-base hidden sm:inline-block">
-              {t('top.account')}
-            </a>
             <a
               href="#"
               className="inline-block px-2.5 md:px-3.5 py-1.5 md:py-2.5 rounded-[10px] bg-white text-navy no-underline font-semibold text-sm md:text-base hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"

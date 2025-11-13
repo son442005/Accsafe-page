@@ -84,6 +84,10 @@ const translations: Translations = {
     vi: 'Làm việc mọi lúc, mọi nơi. Lưu trữ đám mây giúp bạn truy cập các hồ sơ của mình trên bất kỳ máy tính nào, giữ cho công việc luôn liền mạch.',
     en: 'Work anytime, anywhere. Cloud storage lets you access your profiles from any machine and keeps work seamless.',
   },
+  'feat.cta': {
+    vi: 'Trải nghiệm ngay',
+    en: 'Try it now',
+  },
   'choose.title': {
     vi: 'Tại sao nên chọn Accsafe?',
     en: 'Why choose Accsafe?',

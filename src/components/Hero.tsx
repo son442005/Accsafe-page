@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="animate-rgb-gradient text-white min-h-screen flex items-center pt-20 md:pt-16 pb-8 md:pb-0 relative overflow-hidden">
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
-      <div className="container relative z-10 px-4 md:px-5">
+      <div className="container relative z-10">
         <div className="flex flex-col items-center text-center space-y-4 md:space-y-6">
           <div className="space-y-3 md:space-y-4 animate-fade-in-up max-w-3xl w-full">
             <h1
