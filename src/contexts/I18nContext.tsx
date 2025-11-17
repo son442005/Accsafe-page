@@ -192,13 +192,81 @@ const translations: Translations = {
     vi: 'Chạy nhiều profile, đồng bộ và phân quyền nhóm theo nhu cầu.',
     en: 'Run multiple profiles, sync and manage team permissions as needed.',
   },
+  'footer.products': {
+    vi: 'Sản phẩm',
+    en: 'Products',
+  },
+  'footer.company': {
+    vi: 'Công ty',
+    en: 'Company',
+  },
+  'footer.resources': {
+    vi: 'Tài nguyên',
+    en: 'Resources',
+  },
+  'footer.legal': {
+    vi: 'Pháp lý',
+    en: 'Legal',
+  },
+  'footer.features': {
+    vi: 'Tính năng',
+    en: 'Features',
+  },
+  'footer.pricing': {
+    vi: 'Bảng giá',
+    en: 'Pricing',
+  },
+  'footer.api': {
+    vi: 'API',
+    en: 'API',
+  },
+  'footer.about': {
+    vi: 'Về chúng tôi',
+    en: 'About Us',
+  },
+  'footer.blog': {
+    vi: 'Blog',
+    en: 'Blog',
+  },
+  'footer.careers': {
+    vi: 'Tuyển dụng',
+    en: 'Careers',
+  },
+  'footer.contact': {
+    vi: 'Liên hệ',
+    en: 'Contact',
+  },
+  'footer.docs': {
+    vi: 'Tài liệu',
+    en: 'Documentation',
+  },
+  'footer.support': {
+    vi: 'Hỗ trợ',
+    en: 'Support',
+  },
+  'footer.community': {
+    vi: 'Cộng đồng',
+    en: 'Community',
+  },
+  'footer.privacy': {
+    vi: 'Chính sách bảo mật',
+    en: 'Privacy Policy',
+  },
+  'footer.terms': {
+    vi: 'Điều khoản sử dụng',
+    en: 'Terms of Service',
+  },
+  'footer.cookie': {
+    vi: 'Chính sách Cookie',
+    en: 'Cookie Policy',
+  },
   'footer.copy': {
     vi: '© 2025 Accsafe. Bảo lưu mọi quyền.',
     en: '© 2025 Accsafe. All rights reserved.',
   },
-  'footer.socials': {
-    vi: 'LinkedIn · Facebook · Twitter',
-    en: 'LinkedIn · Facebook · Twitter',
+  'footer.follow': {
+    vi: 'Theo dõi chúng tôi',
+    en: 'Follow Us',
   },
 };
 

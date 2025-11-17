@@ -1,0 +1,23 @@
+{
+  "name": "Accsafe",
+  "short_name": "Accsafe",
+  "description": "Xóa sổ Dấu vết Trình duyệt. Duyệt web ẩn danh như chưa từng có.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logo-accsafe.svg",
+      "sizes": "200x60",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#07263f",
+  "background_color": "#f1f6fb",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
+
