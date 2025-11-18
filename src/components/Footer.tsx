@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useI18n } from '../contexts/I18nContext';
 import logoImage from '../assets/images/Logo-accsafe.svg';
 
@@ -206,27 +207,24 @@ const Footer = () => {
               {t('footer.copy')}
             </div>
             <div className="flex flex-wrap items-center gap-6 text-sm">
-              <a
-                href="#privacy"
+              <Link
+                to="/privacy-policy"
                 className="text-gray-400 hover:text-accent transition-colors duration-200"
-                onClick={(e) => handleLinkClick(e, '#privacy')}
               >
                 {t('footer.privacy')}
-              </a>
-              <a
-                href="#terms"
+              </Link>
+              <Link
+                to="/terms-of-service"
                 className="text-gray-400 hover:text-accent transition-colors duration-200"
-                onClick={(e) => handleLinkClick(e, '#terms')}
               >
                 {t('footer.terms')}
-              </a>
-              <a
-                href="#cookie"
+              </Link>
+              <Link
+                to="/cookie-policy"
                 className="text-gray-400 hover:text-accent transition-colors duration-200"
-                onClick={(e) => handleLinkClick(e, '#cookie')}
               >
                 {t('footer.cookie')}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
