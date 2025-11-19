@@ -23,6 +23,18 @@ const translations: Translations = {
     vi: 'Tiếng Việt ▾',
     en: 'English ▾',
   },
+  'nav.intro': {
+    vi: 'Giới thiệu',
+    en: 'About',
+  },
+  'nav.features': {
+    vi: 'Tính năng',
+    en: 'Features',
+  },
+  'nav.guide': {
+    vi: 'Hướng dẫn',
+    en: 'Guide',
+  },
   'hero.title': {
     vi: 'Xóa sổ Dấu vết Trình duyệt.<br> Duyệt web ẩn danh như chưa từng có.',
     en: 'Erase browser fingerprints.<br> Browse anonymously like never before.',
@@ -267,6 +279,10 @@ const translations: Translations = {
   'footer.follow': {
     vi: 'Theo dõi chúng tôi',
     en: 'Follow Us',
+  },
+  'footer.navigation': {
+    vi: 'Dịch vụ',
+    en: 'Services',
   },
   // Policy pages
   'policy.back': {

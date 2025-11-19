@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { useI18n } from '../contexts/I18nContext';
 import logoImage from '../assets/images/Logo-accsafe.svg';
 
 const Header = () => {
   const { t, language, setLanguage } = useI18n();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleLanguageToggle = () => {
     setLanguage(language === 'vi' ? 'en' : 'vi');
@@ -15,6 +17,22 @@ const Header = () => {
     }
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    const element = document.querySelector(href);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 w-full bg-gradient-to-r from-navy to-navy-dark backdrop-blur-sm border-b border-navy/50 z-[1200] shadow-lg">
       <div className="container">
@@ -22,13 +40,50 @@ const Header = () => {
           <a href="#" className="flex items-center hover:opacity-80 transition-opacity">
             <img src={logoImage} alt="Accsafe" className="h-8 md:h-[44px] drop-shadow-lg" />
           </a>
+
           <div className="flex items-center gap-2 md:gap-3.5">
-            <a
-              href="#"
-              className="inline-block px-2.5 md:px-3.5 py-1.5 md:py-2.5 rounded-[10px] bg-white text-navy no-underline font-semibold text-sm md:text-base hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            {/* Navigation Menu */}
+            <nav className="hidden md:flex items-center gap-6 lg:gap-8 mr-2 md:mr-4">
+              <a
+                href="#features"
+                onClick={(e) => handleNavClick(e, '#features')}
+                className="text-white/90 hover:text-white text-sm lg:text-base font-medium transition-colors duration-200 hover:scale-105"
+              >
+                {t('nav.intro')}
+              </a>
+              <a
+                href="#features"
+                onClick={(e) => handleNavClick(e, '#features')}
+                className="text-white/90 hover:text-white text-sm lg:text-base font-medium transition-colors duration-200 hover:scale-105"
+              >
+                {t('nav.features')}
+              </a>
+              <a
+                href="#guide"
+                onClick={(e) => handleNavClick(e, '#guide')}
+                className="text-white/90 hover:text-white text-sm lg:text-base font-medium transition-colors duration-200 hover:scale-105"
+              >
+                {t('nav.guide')}
+              </a>
+            </nav>
+            {/* Mobile Menu Button */}
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden w-10 h-10 flex items-center justify-center text-white hover:text-accent transition-colors"
+              aria-label="Toggle menu"
             >
-              {t('top.download')}
-            </a>
+              {isMobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+
             <button
               type="button"
               role="switch"
@@ -55,8 +110,43 @@ const Header = () => {
                   }`}
               />
             </button>
+            <a
+              href="#"
+              className="inline-block px-2.5 md:px-3.5 py-1.5 md:py-2.5 rounded-[10px] bg-white text-navy no-underline font-semibold text-sm md:text-base hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              {t('top.download')}
+            </a>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t border-navy/50 py-4 animate-in slide-in-from-top duration-200">
+            <nav className="flex flex-col gap-4">
+              <a
+                href="#features"
+                onClick={(e) => handleNavClick(e, '#features')}
+                className="text-white/90 hover:text-white text-base font-medium transition-colors duration-200 py-2"
+              >
+                {t('nav.intro')}
+              </a>
+              <a
+                href="#features"
+                onClick={(e) => handleNavClick(e, '#features')}
+                className="text-white/90 hover:text-white text-base font-medium transition-colors duration-200 py-2"
+              >
+                {t('nav.features')}
+              </a>
+              <a
+                href="#guide"
+                onClick={(e) => handleNavClick(e, '#guide')}
+                className="text-white/90 hover:text-white text-base font-medium transition-colors duration-200 py-2"
+              >
+                {t('nav.guide')}
+              </a>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );

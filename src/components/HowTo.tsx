@@ -6,7 +6,7 @@ const HowTo = () => {
   const { t } = useI18n();
 
   return (
-    <section className="bg-white pt-[120px] md:pt-[140px] pb-6 md:pb-9">
+    <section id="guide" className="bg-white pt-[120px] md:pt-[140px] pb-6 md:pb-9">
       <div className="container">
         <div className="flex flex-col lg:flex-row gap-5 md:gap-7">
           <div className="flex-1 space-y-2 md:space-y-3 opacity-0 animate-fade-in-up text-center lg:text-left" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>

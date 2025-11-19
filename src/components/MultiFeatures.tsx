@@ -14,7 +14,7 @@ const MultiFeatures = () => {
   return (
     <section className="bg-white py-6 md:py-9">
       <div className="container">
-        <h2 className="text-center mb-4 md:mb-6.5 text-2xl md:text-3xl lg:text-4xl font-bold opacity-0 animate-fade-in-up px-4" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+        <h2 className="text-center mb-8 md:mb-12 lg:mb-16 text-2xl md:text-3xl lg:text-4xl font-bold opacity-0 animate-fade-in-up px-4" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
           {t('multi.title')}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-7 lg:gap-8 items-start">
