@@ -50,20 +50,14 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="bg-[#e9f0f7] py-[58px] md:py-[74px] lg:py-[90px] relative overflow-hidden">
-      {/* Decor elements - Multilogin style */}
+    <section id="features" className="bg-[#e9f0f7] py-[58px] md:py-[74px] lg:py-[90px] relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Grid pattern */}
         <div className="absolute inset-0 opacity-[0.04]" style={{
           backgroundImage: `linear-gradient(rgba(6, 32, 43, 0.1) 1px, transparent 1px),
                             linear-gradient(90deg, rgba(6, 32, 43, 0.1) 1px, transparent 1px)`,
           backgroundSize: '60px 60px'
         }}></div>
-
-        {/* Gradient overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/20 via-transparent to-purple-50/20"></div>
-
-        {/* Floating gradient blobs */}
         <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-br from-blue-400/8 to-cyan-400/8 rounded-full blur-3xl animate-float decor-blob"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-purple-400/8 to-pink-400/8 rounded-full blur-3xl animate-float decor-blob" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-gradient-to-br from-cyan-400/8 to-blue-400/8 rounded-full blur-3xl animate-float decor-blob" style={{ animationDelay: '2s' }}></div>

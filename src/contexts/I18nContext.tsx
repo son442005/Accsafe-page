@@ -273,8 +273,8 @@ const translations: Translations = {
     en: 'Cookie Policy',
   },
   'footer.copy': {
-    vi: '© 2025 Accsafe. Bảo lưu mọi quyền.',
-    en: '© 2025 Accsafe. All rights reserved.',
+    vi: 'Bảo lưu mọi quyền.',
+    en: 'All rights reserved.',
   },
   'footer.follow': {
     vi: 'Theo dõi chúng tôi',
@@ -525,8 +525,8 @@ const translations: Translations = {
   },
   // Terms of Service
   'terms.title': {
-    vi: '📋 Điều khoản Dịch vụ',
-    en: '📋 Terms of Service',
+    vi: ' Điều khoản Dịch vụ',
+    en: ' Terms of Service',
   },
   'terms.acceptance.title': {
     vi: 'Chấp nhận điều khoản',

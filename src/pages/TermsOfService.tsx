@@ -3,6 +3,7 @@ import { useI18n } from '../contexts/I18nContext';
 import emailIcon from '../assets/gmail.png';
 import facebookIcon from '../assets/communication.png';
 import telegramIcon from '../assets/telegram.png';
+import LanguageToggle from '../components/LanguageToggle';
 import '../styles/policy.css';
 
 const TermsOfService = () => {
@@ -11,10 +12,13 @@ const TermsOfService = () => {
   return (
     <div className="policy-page">
       <div className="content-box">
-        <div className="back-to-home">
-          <Link to="/" className="back-button">
-            {t('policy.back')}
-          </Link>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-6">
+          <div className="back-to-home">
+            <Link to="/" className="back-button">
+              {t('policy.back')}
+            </Link>
+          </div>
+          <LanguageToggle className="self-start sm:self-auto" variant="light" />
         </div>
 
         <h1>{t('terms.title')}</h1>

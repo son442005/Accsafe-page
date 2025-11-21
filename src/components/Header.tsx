@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useI18n } from '../contexts/I18nContext';
 import logoImage from '../assets/images/Logo-accsafe.svg';
+import { scrollToSection } from '../utils/scroll';
 
 const Header = () => {
   const { t, language, setLanguage } = useI18n();
@@ -20,17 +21,7 @@ const Header = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
+    scrollToSection(href);
   };
 
   return (
@@ -42,7 +33,6 @@ const Header = () => {
           </a>
 
           <div className="flex items-center gap-2 md:gap-3.5">
-            {/* Navigation Menu */}
             <nav className="hidden md:flex items-center gap-6 lg:gap-8 mr-2 md:mr-4">
               <a
                 href="#features"
@@ -52,8 +42,8 @@ const Header = () => {
                 {t('nav.intro')}
               </a>
               <a
-                href="#features"
-                onClick={(e) => handleNavClick(e, '#features')}
+                href="#multifeatures"
+                onClick={(e) => handleNavClick(e, '#multifeatures')}
                 className="text-white/90 hover:text-white text-sm lg:text-base font-medium transition-colors duration-200 hover:scale-105"
               >
                 {t('nav.features')}
@@ -66,7 +56,6 @@ const Header = () => {
                 {t('nav.guide')}
               </a>
             </nav>
-            {/* Mobile Menu Button */}
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -119,9 +108,8 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-navy/50 py-4 animate-in slide-in-from-top duration-200">
+          <div className="md:hidden border-t border-navy/50 py-4 animate-fade-in-up">
             <nav className="flex flex-col gap-4">
               <a
                 href="#features"
@@ -131,8 +119,8 @@ const Header = () => {
                 {t('nav.intro')}
               </a>
               <a
-                href="#features"
-                onClick={(e) => handleNavClick(e, '#features')}
+                href="#multifeatures"
+                onClick={(e) => handleNavClick(e, '#multifeatures')}
                 className="text-white/90 hover:text-white text-base font-medium transition-colors duration-200 py-2"
               >
                 {t('nav.features')}
