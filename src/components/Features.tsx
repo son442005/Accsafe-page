@@ -85,9 +85,10 @@ const Features = () => {
                     <h3 className="m-0 mb-4 md:mb-5 text-2xl md:text-3xl lg:text-4xl font-bold">{t(`feat.${feature.key}.title`)}</h3>
                     <p className="text-muted leading-relaxed text-base md:text-lg lg:text-xl mb-4 md:mb-5">{t(`feat.${feature.key}.desc`)}</p>
                     <a
-                      href="https://github.com/son442005/Accsafe-page/releases/download/Accsafe-App/AccSafe-1.0.0-x64.exe"
-                      download
+                      href="https://github.com/son442005/Accsafe-page/releases/tag/Accsafe-App"
                       className="inline-block px-6 md:px-8 py-3 md:py-4 rounded-lg bg-accent text-white no-underline font-semibold text-base md:text-lg hover:bg-accent/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-fit"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       {t('feat.cta')}
                     </a>
@@ -122,9 +123,10 @@ const Features = () => {
                     <h3 className="m-0 mb-4 md:mb-5 text-2xl md:text-3xl lg:text-4xl font-bold">{t(`feat.${feature.key}.title`)}</h3>
                     <p className="text-muted leading-relaxed text-base md:text-lg lg:text-xl mb-4 md:mb-5">{t(`feat.${feature.key}.desc`)}</p>
                     <a
-                      href="https://github.com/son442005/Accsafe-page/releases/download/Accsafe-App/AccSafe-1.0.0-x64.exe"
-                      download
+                      href="https://github.com/son442005/Accsafe-page/releases/tag/Accsafe-App"
                       className="inline-block px-6 md:px-8 py-3 md:py-4 rounded-lg bg-accent text-white no-underline font-semibold text-base md:text-lg hover:bg-accent/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-fit"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       {t('feat.cta')}
                     </a>

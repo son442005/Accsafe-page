@@ -109,9 +109,10 @@ const Header = () => {
             </button>
 
             <a
-              href="https://github.com/son442005/Accsafe-page/releases/download/Accsafe-App/AccSafe-1.0.0-x64.exe"
-              download
+              href="https://github.com/son442005/Accsafe-page/releases/tag/Accsafe-App"
               className="btn-secondary btn-sm hidden md:inline-block"
+              target="_blank"
+              rel="noreferrer"
             >
               {t('top.download')}
             </a>
@@ -143,9 +144,10 @@ const Header = () => {
                 {t('nav.guide')}
               </a>
               <a
-                href="https://github.com/son442005/Accsafe-page/releases/download/Accsafe-App/AccSafe-1.0.0-x64.exe"
-                download
+                href="https://github.com/son442005/Accsafe-page/releases/tag/Accsafe-App"
                 className="btn-secondary btn-sm mt-2 inline-block self-start"
+                target="_blank"
+                rel="noreferrer"
               >
                 {t('top.download')}
               </a>
