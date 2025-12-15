@@ -14,6 +14,60 @@
   }
 }
 
+@layer components {
+  .btn {
+    @apply inline-block rounded-lg px-6 py-3 text-base font-semibold shadow-lg transition-all duration-300 hover:shadow-xl;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-accent/90 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-navy hover:bg-white/90 hover:scale-105;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-lg;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .section {
+    @apply py-section md:py-section-md lg:py-section-lg;
+  }
+
+  .section-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .section-container {
+    @apply container;
+  }
+
+  .heading-1 {
+    @apply text-h1 font-bold leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-h2 font-bold;
+  }
+
+  .heading-3 {
+    @apply text-h3 font-semibold;
+  }
+
+  .body-text {
+    @apply text-body text-muted leading-relaxed;
+  }
+
+  .body-text-lg {
+    @apply text-body-lg text-muted leading-relaxed;
+  }
+}
+
 @layer utilities {
   .container {
     @apply max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 xl:px-16;
