@@ -26,7 +26,7 @@ const Hero = () => {
             </ul>
           </div>
           <a
-            href="/AccSafe-1.0.0-x64.exe"
+            href="https://github.com/son442005/Accsafe-page/releases/download/Accsafe-App/AccSafe-1.0.0-x64.exe"
             download
             className="inline-block px-6 md:px-8 py-3 md:py-4 rounded-[10px] bg-white text-navy no-underline font-semibold text-base md:text-lg hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl opacity-0 animate-fade-in-up"
             style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
